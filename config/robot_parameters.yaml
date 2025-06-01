@@ -1,0 +1,97 @@
+robot_parameters:
+  # 機器人基本資訊
+  robot_name: "kuka_kr300r2500ultra"
+  robot_type: "kr300"
+  robot_version: "r2500ultra"
+  
+  # 關節參數
+  joints:
+    joint_a1:
+      name: "A1"
+      type: "revolute"
+      axis: [0, 0, -1]
+      position: [0, 0, 0.675]
+      orientation: [0, 0, 0]
+      limits:
+        min: -185.0
+        max: 185.0
+        velocity: 156.0
+        effort: 0
+    joint_a2:
+      name: "A2"
+      type: "revolute"
+      axis: [0, 1, 0]
+      position: [0.35, 0, 0]
+      orientation: [0, 0, 0]
+      limits:
+        min: -155.0
+        max: 35.0
+        velocity: 156.0
+        effort: 0
+    joint_a3:
+      name: "A3"
+      type: "revolute"
+      axis: [0, 1, 0]
+      position: [1.150, 0, 0]
+      orientation: [0, 0, 0]
+      limits:
+        min: -130.0
+        max: 154.0
+        velocity: 156.0
+        effort: 0
+    joint_a4:
+      name: "A4"
+      type: "revolute"
+      axis: [-1, 0, 0]
+      position: [1.0, 0, -0.041]
+      orientation: [0, 0, 0]
+      limits:
+        min: -350.0
+        max: 350.0
+        velocity: 330.0
+        effort: 0
+    joint_a5:
+      name: "A5"
+      type: "revolute"
+      axis: [0, 1, 0]
+      position: [0, 0, 0]
+      orientation: [0, 0, 0]
+      limits:
+        min: -130.0
+        max: 130.0
+        velocity: 330.0
+        effort: 0
+    joint_a6:
+      name: "A6"
+      type: "revolute"
+      axis: [-1, 0, 0]
+      position: [0, 0, 0]
+      orientation: [0, 0, 0]
+      limits:
+        min: -350.0
+        max: 350.0
+        velocity: 615.0
+        effort: 0
+
+  # 工具座標系參數
+  tool_frame:
+    name: "tool0"
+    position: [0.240, 0, 0]
+    orientation: [0, 90, 0]  # 以度為單位
+
+  # 視覺化參數
+  visualization:
+    # 關節顏色
+    joint_colors:
+      default: [1.0, 1.0, 1.0, 1.0]  # RGBA
+      highlight: [0.0, 1.0, 0.0, 1.0]  # 高亮顏色
+    # 關節大小
+    joint_sizes:
+      default: 0.05
+      highlight: 0.08
+    # 連桿顏色
+    link_colors:
+      default: [0.7, 0.7, 0.7, 1.0]
+      highlight: [0.0, 0.8, 0.0, 1.0]
+    # 連桿透明度
+    link_alpha: 0.8 
